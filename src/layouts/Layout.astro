@@ -1,0 +1,80 @@
+---
+import "@fontsource/norwester"; // Defaults to weight 400
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="page-container">
+			<slot />
+		</div>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: "Norwester";
+	}
+	body,
+	html {
+		margin: 0;
+		padding: 0;
+		height: 100vh;
+	}
+	* {
+		box-sizing: border-box;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	.page-container {
+		width: 100vw;
+		height: 100vh;
+		border: 3px;
+		margin: 0;
+		padding: 0;
+		background-image: url("https://s3.us-west-1.amazonaws.com/thankyoumikezilla.com/background+1.png");
+		/* background-position: -700px -333px; */
+		background-size: cover;
+		overflow: visible;
+		padding: 0;
+		margin: 0;
+	}
+
+	@media (max-width: 430px) {
+		.page-container {
+			background-position: -500px 0px;
+		}
+	}
+</style>
