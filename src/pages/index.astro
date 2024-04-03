@@ -1,36 +1,69 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
+// import Socials from "../components/Socials.astro";
 ---
 
-<Layout title="Mikechella 2024">
+<Layout title="Mike's Day Out 2024 Music Festival - April 13 & 20">
 	<main>
 		<img
 			class="poster-text"
-			src="https://s3.us-east-1.amazonaws.com/mikechella.com/Mikechella%20transparent.png"
-			alt="transparent poster with text only"
+			src="https://s3.amazonaws.com/mikechella.com/Mike's+Day+Out+Transparent.png"
+			alt="transparent poster with text only for Mike's Day Out music festival in Los Angeles, California on April 13 & 20 from 8PM to 3AM"
 		/>
 		<Footer />
+		<div class="poster-text">
+			<h1>Mike's House presents Mike's Day Out 2024</h1>
+			<h2>Lineup</h2>
+			<ul>
+				<li>ketchup</li>
+				<li>Abbylicious</li>
+				<li>Shredy</li>
+				<li>wrmbrw</li>
+				<li>feelzlikestevo</li>
+				<li>f.synthetic</li>
+				<li>manamoves</li>
+				<li>steven g</li>
+				<li>Lonzo</li>
+				<li>La Grand</li>
+				<li>Kiinfolks</li>
+				<li>Lèo Ovalle</li>
+				<li>Mikezilla</li>
+				<li>super fake</li>
+				<li>Juan Latino</li>
+				<li>Hosted by: Patrick Cloud</li>
+				<li>Food provided by: El Cocinegro</li>
+			</ul>
+			<p>Mike's Day Out takes the Mike's House experience you love and brings it outside! Mike's House is a live streamed show that features up and coming DJs providing the vibes for a house party. Watch as the party goes from small kickback to a rager where truly anything can happen.
+
+				We're featuring 15 DJs across 2 weekends with genres ranging from House, Tech House, Minimal, Rap, Disco, Afrobeat, R&B, and Jungle/DnB.</p>
+		</div>
+		<!-- <Socials /> -->
 	</main>
 </Layout>
 
 <style>
 	main {
-		width: 100%;
 		color: white;
 		font-size: 20px;
+	}
+	div.poster-text {
+		visibility: hidden;
 	}
 	.poster-text {
 		max-height: 96vh;
 		margin: 0 auto;
 		display: block;
+		margin-top: -10px;
+		margin-bottom: -35px;
 	}
-	@media (max-width: 430px) {
+	@media (max-width: 590px) {
 		.poster-text {
 			max-width: 435px;
+			width: 100%;
 			max-height: 96vh;
-			margin: 0 auto;
 			display: block;
+			margin-bottom: -15px;
 		}
 	}
 	.astro-a {
