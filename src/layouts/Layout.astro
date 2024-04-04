@@ -2,7 +2,7 @@
 import "@fontsource/norwester"; // Defaults to weight 400
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -10,97 +10,101 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Mike's Day Out 2024 April 13 & 20 - live streamed music festival held at Native Son LA in Downtown LA. 15 DJs spanning House, Rap, and Disco." />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="page-container">
-			<slot />
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Mike's Day Out 2024 April 13 & 20 - live streamed music festival held at Native Son LA in Downtown LA the same weekends as Coachella. In this weekend festival you'll get to see 15 DJs spanning House, Rap, and Disco."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="page-container">
+      <slot />
+    </div>
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: "Norwester";
-	}
-	body,
-	html {
-		margin: 0;
-		padding: 0;
-		height: 100%;
-		width: 100%;
-	}
-	* {
-		box-sizing: border-box;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-	.page-container {
-		width: 100vw;
-		height: 100vh;
-		border: 3px;
-		margin: 0;
-		padding: 0;
-		background-image: url("https://s3.amazonaws.com/mikechella.com/Mike's+Day+Out+BG+3.jpg");
-		animation-duration: 30s;
-  		animation-name: bg-movement;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-		background-size: calc(100% + 300px) calc(100% + 300px);
-		overflow: hidden;
-		padding: 0;
-		margin: 0;
-	}
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: "Norwester";
+  }
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+  .page-container {
+    width: 100vw;
+    height: 100vh;
+    border: 3px;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://s3.amazonaws.com/mikechella.com/Mike's+Day+Out+BG+3.jpg");
+    animation-duration: 30s;
+    animation-name: bg-movement;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-size: calc(100% + 300px) calc(100% + 300px);
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
 
-	@media (max-width: 590px) {
-		.page-container {
-			background-position: 500px -200px;
-		}
-	}
+  @media (max-width: 590px) {
+    .page-container {
+      background-position: 500px -200px;
+    }
+  }
 
-	@keyframes bg-movement {
-		from {
-			background-position: -30px -30px;
-		}
+  @keyframes bg-movement {
+    from {
+      background-position: -30px -30px;
+    }
 
-		25% {
-			background-position: -15px -15px;  /* adfasd */
-		}
+    25% {
+      background-position: -15px -15px; /* adfasd */
+    }
 
-		50% {
-			background-position: 0px -30px;
-		}
+    50% {
+      background-position: 0px -30px;
+    }
 
-		75% {
-			background-position: -15px -45px;
-		}
+    75% {
+      background-position: -15px -45px;
+    }
 
-		to {
-			background-position: -30px -30px;
-		}
-	}
+    to {
+      background-position: -30px -30px;
+    }
+  }
 </style>

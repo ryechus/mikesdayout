@@ -1,0 +1,108 @@
+---
+const socialLinks = [
+  {
+    href: "https://instagram.com/mikeshouse.tv",
+    imgSrc:
+      "https://s3.amazonaws.com/mikechella.com/static/Instagram_Glyph_White.svg",
+    title: "link to mikeshouse.tv Instagram",
+    altText: "svg icon for Instagram",
+  },
+  {
+    href: "https://youtube.com/@thankyoumikezilla",
+    imgSrc:
+      "https://s3.amazonaws.com/mikechella.com/static/yt_icon_mono_dark.png",
+    title: "link to thankyoumikezilla on youtube",
+    altText: "png icon for YouTube",
+  },
+  {
+    href: "https://twitch.tv/thankyoumikezilla",
+    imgSrc:
+      "https://s3.amazonaws.com/mikechella.com/static/TwitchGlitchWhite.svg",
+    title: "link to thankyoumikezilla on twitch",
+    altText: "svg icon for Twitch",
+  },
+  {
+    href: "https://kick.com/thankyoumikezilla",
+    imgSrc: "https://s3.amazonaws.com/mikechella.com/static/Kick_logo.svg",
+    title: "link to thankyoumikezilla on kick",
+    altText: "svg icon for Kick",
+    class: "kick",
+  },
+];
+---
+
+<div class="socials">
+  {
+    socialLinks.map((data) => (
+      <a href={data.href} title={data.title}>
+        <img class={data.class} src={data.imgSrc} alt={data.altText} />
+      </a>
+    ))
+  }
+  <!-- <a
+    href="https://instagram.com/mikeshouse.tv"
+    title="link to mikeshouse.tv instagram"
+  >
+    <img
+      src="https://s3.amazonaws.com/mikechella.com/static/Instagram_Glyph_White.svg"
+      alt="icon for instagram"
+    />
+  </a>
+  <a
+    href="https://youtube.com/@thankyoumikezilla"
+    title="link to thankyoumikezilla's youtube"
+  >
+    <img
+      src="https://s3.amazonaws.com/mikechella.com/yt_icon_mono_dark.png"
+      alt="icon for youtube"
+    />
+  </a> -->
+</div>
+<style>
+  a {
+    text-decoration: none;
+    margin: 0 6px;
+  }
+  img {
+    white-space: nowrap;
+    display: inline-flex;
+    vertical-align: middle;
+  }
+  .socials {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .socials img {
+    width: 25px;
+  }
+  img.kick {
+    object-position: -44px;
+    object-fit: contain;
+    width: 63px !important;
+    margin-right: -44px;
+    filter: saturate(0%) brightness(0) invert(1);
+    -webkit-filter: saturate(0%) brightness(0) invert(1);
+  }
+  @media (max-width: 590px) {
+    .socials {
+      position: unset;
+      right: unset;
+      bottom: unset;
+      max-width: 435px;
+      padding: 0 35px;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+  }
+  a,
+  a:visited,
+  a:active,
+  a:hover {
+    color: unset;
+    font-size: 1.25em;
+  }
+</style>
