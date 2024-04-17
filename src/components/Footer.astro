@@ -3,7 +3,11 @@
 ---
 
 <div class="links">
-	<a href="https://ticketscandy.com/e/mikes-day-out-2024-4566?aff=mikes_day_out_com">get tickets</a>
+	<a
+		id="get_tickets"
+		href="https://ticketscandy.com/e/mikes-day-out-2024-4566?aff=mikes_day_out_com"
+		>get tickets</a
+	>
 </div>
 <style>
 	.links {
@@ -16,11 +20,22 @@
 		color: unset;
 		font-size: 1.25em;
 	}
-
-	/* @media (min-width: 430px) {
-		.links {
-			position: relative;
-			top: -25px;
-		}
-	} */
 </style>
+<script>
+	const currentHref = window.location.search;
+
+	const searchParams = new URLSearchParams(currentHref);
+	const utmSource = searchParams.get("utm_source");
+	let affSuffix = "";
+	if (utmSource !== null) {
+		affSuffix = `_${utmSource}`;
+	}
+
+	const getTicketsElement = document.getElementById("get_tickets");
+	const getTicketsHref = new URL(getTicketsElement.getAttribute("href"));
+
+	const currentAff = getTicketsHref.searchParams.get("aff");
+	getTicketsHref.searchParams.set("aff", `${currentAff}${affSuffix}`);
+
+	getTicketsElement.setAttribute("href", getTicketsHref.href);
+</script>
