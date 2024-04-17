@@ -22,13 +22,11 @@
 	}
 </style>
 <script>
-	const currentHref = window.location.search;
+	const referrer = new URL(document.referrer);
 
-	const searchParams = new URLSearchParams(currentHref);
-	const utmSource = searchParams.get("utm_source");
 	let affSuffix = "";
-	if (utmSource !== null) {
-		affSuffix = `_${utmSource}`;
+	if (referrer.hostname === "instagram.com") {
+		affSuffix = "instagram";
 	}
 
 	const getTicketsElement = document.getElementById("get_tickets");
