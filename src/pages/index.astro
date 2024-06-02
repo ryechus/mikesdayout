@@ -4,116 +4,110 @@ import Footer from "../components/Footer.astro";
 import Socials from "../components/Socials.astro";
 ---
 
-<Layout title="Mike's Day Out 2024 Music Festival - April 13 & 20">
-	<main>
-		<img
-			class="poster-text"
-			src="https://s3.amazonaws.com/mikechella.com/Mike's+Day+Out+Transparent.png"
-			alt="transparent poster with text only for Mike's Day Out music festival in Los Angeles, California on April 13 & 20 from 8PM to 3AM"
-		/>
-		<Footer />
-		<Socials />
-		<div class="poster-text">
-			<h1>Mike's House presents Mike's Day Out 2024</h1>
-			<h2>Lineup</h2>
-			<ul>
-				<li>ketchup</li>
-				<li>Abbylicious</li>
-				<li>Shredy</li>
-				<li>wrmbrw</li>
-				<li>feelzlikestevo</li>
-				<li>f.synthetic</li>
-				<li>manamoves</li>
-				<li>steven g</li>
-				<li>Lonzo</li>
-				<li>La Grand</li>
-				<li>Kiinfolks</li>
-				<li>Lèo Ovalle</li>
-				<li>Mikezilla</li>
-				<li>super fake</li>
-				<li>Juan Latino</li>
-				<li>Hosted by: Patrick Cloud</li>
-				<li>Food provided by: El Cocinegro</li>
-			</ul>
-			<p>Mike's Day Out takes the Mike's House experience you love and brings it outside! Mike's House is a live streamed show that features up and coming DJs providing the vibes for a house party. Watch as the party goes from small kickback to a rager where truly anything can happen.
-
-				We're featuring 15 DJs across 2 weekends with genres ranging from House, Tech House, Minimal, Rap, Disco, Afrobeat, R&B, and Jungle/DnB.</p>
-		</div>
-	</main>
+<Layout title="Native After Dark - May 18">
+  <main>
+    <img
+      class="poster-text"
+      src="https://s3.us-east-1.amazonaws.com/mikesafterdark.com/assets/Native%20After%20Dark%20%28transparent%29.png"
+      alt="transparent poster with text only for Native After Dark in Los Angeles, California on May 18 from 8PM to 2AM"
+    />
+    <Footer />
+    <Socials />
+    <div class="poster-text">
+      <h1>Mike's House presents Native After Dark 2024</h1>
+      <h2>Lineup</h2>
+      <ul>
+        <li>Mikezilla</li>
+        <li>super fake</li>
+        <li>Juan Latino</li>
+        <li>Ketchup</li>
+        <li>Lonzo</li>
+        <li>La Grand</li>
+      </ul>
+      <h2>Description</h2>
+      <p>
+        Native After Dark is a new monthly party series featuring the best up
+        and coming DJs in LA. Our parties will feature house, disco, rap,
+        minimal, hardgroove, drum n bass, afrobeat, and more. Presented by
+        Mike’s House in partnership with Native Son, you can expect good food,
+        great vibes, and impeccable, affordable drinks.
+      </p>
+    </div>
+  </main>
 </Layout>
 
 <style>
-	main {
-		color: white;
-		font-size: 20px;
-	}
-	div.poster-text {
-		visibility: hidden;
-	}
-	.poster-text {
-		max-height: 96vh;
-		margin: 0 auto;
-		display: block;
-		margin-top: -10px;
-		margin-bottom: -35px;
-	}
-	@media (max-width: 590px) {
-		.poster-text {
-			max-width: 435px;
-			width: 100%;
-			max-height: 96vh;
-			display: block;
-			margin-bottom: -15px;
-		}
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(
-			rgba(var(--accent-dark), 66%),
-			rgba(var(--accent-dark), 33%)
-		);
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+  main {
+    color: white;
+    font-size: 20px;
+  }
+  div.poster-text {
+    visibility: hidden;
+  }
+  .poster-text {
+    max-height: 96vh;
+    margin: 0 auto;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: -75px;
+  }
+  @media (max-width: 590px) {
+    .poster-text {
+      max-width: 435px;
+      width: 100%;
+      max-height: 96vh;
+      display: block;
+      margin-bottom: -75px;
+    }
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    margin-bottom: 2rem;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    background: linear-gradient(
+      rgba(var(--accent-dark), 66%),
+      rgba(var(--accent-dark), 33%)
+    );
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  .instructions code {
+    font-size: 0.8em;
+    font-weight: bold;
+    background: rgba(var(--accent-light), 12%);
+    color: rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0.3em 0.4em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent-light));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
 </style>

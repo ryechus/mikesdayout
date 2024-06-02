@@ -10,6 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/libre-baskerville": "^5.0.13",
     "@fontsource/norwester": "^5.0.7",
     "astro": "^4.5.12"
   }
