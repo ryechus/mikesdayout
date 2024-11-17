@@ -1,5 +1,5 @@
 ---
-import "@fontsource/libre-baskerville/400-italic.css"; // Specify weight and style
+import "@fontsource/bebas-neue";
 
 interface Props {
   title: string;
@@ -8,33 +8,32 @@ interface Props {
 const { title } = Astro.props;
 
 const description =
-  "Native After Dark 2024 April 13 & 20 - live streamed music festival held at Native Son LA in Downtown LA the same weekends as Coachella. In this weekend festival you'll get to see 15 DJs spanning House, Rap, and Disco.";
+  "Nite Session + Open Decks - November 25, 2024 @ The Graryson Bar DTLA";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
+    <meta name="description" content={title} />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta property="og:title" content={title} />
     <meta property="og:type" content="article" />
-    <meta property="og:description" content={description} />
-    <meta
+    <meta property="og:description" content={title} />
+    <!-- <meta
       property="og:image"
-      content="https://s3.us-east-1.amazonaws.com/mikesafterdark.com/assets/Native%20After%20Dark%20%28banner%29.jpg"
-    />
+      content="https://mikesafterdark.com/assets/Block%20Party%20Pop%20Up%20%28banner%29.jpg"
+    /> -->
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="480" />
-    <meta property="og:url" content="https://mikesafterdark.com" />
+    <meta property="og:url" content="https://mikeshouse.tv" />
     <meta name="twitter:card" content="summary_large_image" />
-
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <title>{title}</title>
-    <script
-      defer
-      data-domain="mikesafterdark.com"
-      src="https://plausible.io/js/script.tagged-events.js"></script>
   </head>
   <body>
     <div class="page-container">
@@ -55,8 +54,9 @@ const description =
     );
   }
   html {
-    font-family: "Libre Baskerville";
-    font-style: italic;
+    font-family: "Bebas Neue";
+    text-transform: uppercase;
+    font-weight: 900;
   }
   body,
   html {
@@ -85,21 +85,21 @@ const description =
     border: 3px;
     margin: 0;
     padding: 0;
-    background-image: url("https://s3.us-east-1.amazonaws.com/mikesafterdark.com/assets/Native%20After%20Dark%20%28bg%29.jpg");
-    animation-duration: 30s;
-    animation-name: bg-movement;
+    background-image: url("https://mikeshouse.tv/assets/Nite%20session%20bg.gif");
+    /* animation-duration: 30s; */
+    /* animation-name: bg-movement;
     animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier();
-    background-size: calc(100% + 300px) calc(100% + 300px);
+    animation-timing-function: cubic-bezier(); */
+    background-size: 100% 100%;
     overflow: hidden;
     padding: 0;
     margin: 0;
   }
 
   @media (max-width: 590px) {
-    .page-container {
+    /* .page-container {
       background-position: 500px -200px;
-    }
+    } */
   }
 
   @keyframes bg-movement {
